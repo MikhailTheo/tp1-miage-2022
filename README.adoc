@@ -54,7 +54,13 @@ describe('Test de la fonction finalFonction()' => {
 ```bash
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
+
 *Expliquer cette ligne de commande (y compris les options utilisées)*
+
+docker run sert à lancer une image ici ce sera l'image postgres
+-d permet de lancer la taches en fond 
+-e permet de redéfinir les variables d'environnement : dans notre cas, nous avons redéfini la valeur de POSTGRES_PASSWORD
+- on lancera l'image sur le port 5432
 
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
 
