@@ -1,5 +1,4 @@
 # TP MIAGE conception logicielle
-
 NOTE: TP de trois slots de 1h20
 
 ## Nom du(des) étudiant(e)(s) de ce monôme/binôme 
@@ -38,21 +37,35 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 * Observer le code du projet `todolist-debut-ex1`
 
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
+*** Non il n'est pas structuré en couche. L'ensemble des fichier se trouve au meme niveau et ne sont pas de la meme utilité. Oui à terme si l'application vient à se developper davantage la non division des fichiers par couche viendrai à avoir un dossier contenant 100+ fichiers. Et donc d'etre ilisible.
 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
+/todolist-debut-ex1/src/main/java/com/acme/todolist/TodoListController.java
 
 *Cette règle est-elle facilement testable par un test unitaire ?*
-
+***Oui elle est facilement testable avec un test unitaire il suffit de tester avec un code :
+describe('Test de la fonction finalFonction()' => {
+    it('test fonction avec une todo > 24h ', () => {
+        expect( finalFonction(TOTO[25h]).toBe(LATE TOTO[25h])
+    })
+})
+***
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
+
 *Expliquer cette ligne de commande (y compris les options utilisées)*
+
+docker run sert à lancer une image ici ce sera l'image postgres
+-d permet de lancer la taches en fond 
+-e permet de redéfinir les variables d'environnement : dans notre cas, nous avons redéfini la valeur de POSTGRES_PASSWORD
+- on lancera l'image sur le port 5432
 
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
-
+Il est null car il n'a jamais été injecté. Pour l'injecter il faut mettre @inject au dessus du constructeur et importer cette methode de javax.
 * Modifier le code en conséquence.
 
 * Tester vos endpoints avec un client REST.
