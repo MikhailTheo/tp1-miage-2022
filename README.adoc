@@ -65,7 +65,7 @@ docker run sert à lancer une image ici ce sera l'image postgres
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
 
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
-
+Il est null car il n'a jamais été injecté. Pour l'injecter il faut mettre @inject au dessus du constructeur et importer cette methode de javax.
 * Modifier le code en conséquence.
 
 * Tester vos endpoints avec un client REST.
