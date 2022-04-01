@@ -107,6 +107,10 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
 
 *Rappeler en quelques lignes les grands principes de l'architecture hexagonale.*
 
+***L'architecture hexagonale décompose un système en plusieurs composants interchangeables et faiblement couplés, tels le noyau de l'application, la base de données, l'interface utilisateur, les scripts de test ou encore les interfaces avec d'autres systèmes. Chaque composant est connecté aux autres par l'intermédiaire de « ports » qui représentent un canal de communication. La communication via ces ports suit un protocole qui dépend de l'objectif de l'interaction. Les ports et les protocoles définissent une interface de programmation applicative (API) abstraite, qui peut être mise en œuvre par tout moyen technique approprié (par exemple: invocation de méthodes dans un langage orienté objet, appels de procédure distante ou encore services Web).
+***
+
+
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
 
 * prend un `TodoItem` au format JSON dans le body (voir exemple de contenu plus haut);
