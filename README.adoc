@@ -131,6 +131,8 @@ Tests d'intégration
 
 *Que teste-on dans ce cas ?*
 
+Il faut tester le bon fonctionnement de l'API.
+
 *S'il vous reste du temps, écrire quelques uns de ces types de test.*
 
 [TIP]
