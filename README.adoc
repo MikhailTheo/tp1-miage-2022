@@ -43,13 +43,14 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 /todolist-debut-ex1/src/main/java/com/acme/todolist/TodoListController.java
 
 *Cette règle est-elle facilement testable par un test unitaire ?*
-***Oui elle est facilement testable avec un test unitaire il suffit de tester avec un code :
+
+Oui elle est facilement testable avec un test unitaire il suffit de tester avec un code :
 describe('Test de la fonction finalFonction()' => {
     it('test fonction avec une todo > 24h ', () => {
         expect( finalFonction(TOTO[25h]).toBe(LATE TOTO[25h])
     })
 })
-***
+
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
@@ -127,7 +128,7 @@ _Temps estimé : 20 mins_
 
 *Quels types de tests devra-t-on écrire pour les adapteurs ?* 
 
-Tests d'intégration
+Nous devrons ecrire des Tests d'intégration
 
 *Que teste-on dans ce cas ?*
 
