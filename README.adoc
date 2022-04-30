@@ -131,7 +131,7 @@ Tests d'intégration
 
 *Que teste-on dans ce cas ?*
 
-Il faut tester le bon fonctionnement de l'API.
+Il faut tester l'ensemble des modules et la compatibilité entre eux
 
 *S'il vous reste du temps, écrire quelques uns de ces types de test.*
 
